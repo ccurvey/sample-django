@@ -6,6 +6,7 @@ services:
     branch: static
     deploy_on_push: true
   run_command: gunicorn --worker-tmp-dir /dev/shm mysite.wsgi
+  source_dir: /
   envs:
   - key: DISABLE_COLLECTSTATIC
     value: "1"
